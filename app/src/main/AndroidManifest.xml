@@ -10,10 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FlagQuiz">
         <activity
+            android:name=".FlagQuizQuestions"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:screenOrientation="portrait"
-            >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
