@@ -36,7 +36,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Welcome"
+                android:text="@string/welcome"
                 android:textSize="35sp"
                 android:textStyle="bold"
                 android:gravity="center"
@@ -45,7 +45,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Enter your name"
+                android:text="@string/enter_your_name"
                 android:layout_marginTop="16dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -61,7 +61,8 @@
                 <androidx.appcompat.widget.AppCompatEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Name"
+                    android:id="@+id/nameEditText"
+                    android:hint="@string/name"
                     android:inputType="textCapWords"
                     android:textColorHint="@color/hint_grey"
                     android:textColor="@color/grey">
@@ -75,7 +76,8 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Confirm"
+                android:id="@+id/startQuizBtn"
+                android:text="@string/confirm"
                 android:layout_margin="16dp"
                 android:background="@drawable/roundstyle"
                 android:backgroundTint="@color/purple_200"
