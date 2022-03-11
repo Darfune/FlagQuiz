@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FlagQuiz">
         <activity
+            android:name=".EndActivity"
+            android:exported="false" />
+        <activity
             android:name=".FlagQuizQuestions"
             android:exported="false" />
         <activity
