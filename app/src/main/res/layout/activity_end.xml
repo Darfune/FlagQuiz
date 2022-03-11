@@ -11,10 +11,18 @@
     tools:context=".EndActivity">
 
     <TextView
-        android:id="@+id/usernameResultsTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Your Results "
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/usernameResultsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="username"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold"/>
@@ -39,6 +47,7 @@
         android:textStyle="bold"/>
 
     <android.widget.Button
+        android:id="@+id/retryBtn"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_marginTop="16dp"
