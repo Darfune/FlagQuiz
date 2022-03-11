@@ -2,111 +2,518 @@ package com.example.flagquiz
 
 object Constants {
 
-    fun getQuestions(): ArrayList<FlagQuestion> {
-        val questionsList = ArrayList<FlagQuestion>()
+    fun getCountries(): HashMap<Int, String> {
+        var countriesHashMap = HashMap<Int, String>()
 
-        // 1
-        val que1 = FlagQuestion(
-            1, "What country does this flag belong to?",
-            R.drawable.ic_flag_of_argentina,
-            "Argentina", "Australia",
-            "Armenia", "Austria", 1
-        )
+        countriesHashMap[0] = "Andorra"
+        countriesHashMap[1] = "United Arab Emirates"
+        countriesHashMap[2] = "Afghanistan"
+        countriesHashMap[3] = "Antigua & Barbuda"
+        countriesHashMap[4] = "Anguilla"
+        countriesHashMap[5] = "Albania"
+        countriesHashMap[6] = "Armenia"
+        countriesHashMap[7] = "Angola"
+        countriesHashMap[8] = "Argentina"
+        countriesHashMap[9] = "American Samoa"
+        countriesHashMap[10] = "Austria"
+        countriesHashMap[11] = "Australia"
+        countriesHashMap[12] = "Aruba"
+        countriesHashMap[13] = "Åland Islands"
+        countriesHashMap[14] = "Azerbaijan"
+        countriesHashMap[15] = "Bosnia & Herzegovina"
+        countriesHashMap[16] = "Barbados"
+        countriesHashMap[17] = "Bangladesh"
+        countriesHashMap[18] = "Belgium"
+        countriesHashMap[19] = "Burkina Faso"
+        countriesHashMap[20] = "Bulgaria"
+        countriesHashMap[21] = "Bahrain"
+        countriesHashMap[22] = "Burundi"
+        countriesHashMap[23] = "Benin"
+        countriesHashMap[24] = "St. Barthélemy"
+        countriesHashMap[25] = "Bermuda"
+        countriesHashMap[26] = "Brunei"
+        countriesHashMap[27] = "Bolivia"
+        countriesHashMap[28] = "Brazil"
+        countriesHashMap[29] = "Bahamas"
+        countriesHashMap[30] = "Bhutan"
+        countriesHashMap[31] = "Bouvet Island"
+        countriesHashMap[32] = "Botswana"
+        countriesHashMap[33] = "Belarus"
+        countriesHashMap[34] = "Belize"
+        countriesHashMap[35] = "Canada"
+        countriesHashMap[36] = "Cocos Islands"
+        countriesHashMap[37] = "Congo - Kinshasa"
+        countriesHashMap[38] = "Central African Republic"
+        countriesHashMap[39] = "Congo - Brazzaville"
+        countriesHashMap[40] = "Switzerland"
+        countriesHashMap[41] = "Côte d’Ivoire"
+        countriesHashMap[42] = "Cook Islands"
+        countriesHashMap[43] = "Chile"
+        countriesHashMap[44] = "Cameroon"
+        countriesHashMap[45] = "China"
+        countriesHashMap[46] = "Colombia"
+        countriesHashMap[47] = "Costa Rica"
+        countriesHashMap[48] = "Cuba"
+        countriesHashMap[49] = "Cape Verde"
+        countriesHashMap[50] = "Curaçao"
+        countriesHashMap[51] = "Christmas Island"
+        countriesHashMap[52] = "Cyprus"
+        countriesHashMap[53] = "Czech Republic"
+        countriesHashMap[54] = "Germany"
+        countriesHashMap[55] = "Djibouti"
+        countriesHashMap[56] = "Denmark"
+        countriesHashMap[57] = "Dominica"
+        countriesHashMap[58] = "Dominican Republic"
+        countriesHashMap[59] = "Algeria"
+        countriesHashMap[60] = "Ecuador"
+        countriesHashMap[61] = "Estonia"
+        countriesHashMap[62] = "Egypt"
+        countriesHashMap[63] = "Eritrea"
+        countriesHashMap[64] = "Spain"
+        countriesHashMap[65] = "Ethiopia"
+        countriesHashMap[66] = "Finland"
+        countriesHashMap[67] = "Fiji"
+        countriesHashMap[68] = "Falkland Islands"
+        countriesHashMap[69] = "Micronesia"
+        countriesHashMap[70] = "Faroe Islands"
+        countriesHashMap[71] = "France"
+        countriesHashMap[72] = "Gabon"
+        countriesHashMap[73] = "United Kingdom"
+        countriesHashMap[74] = "England"
+        countriesHashMap[75] = "Northern Ireland"
+        countriesHashMap[76] = "Scotland"
+        countriesHashMap[77] = "Wales"
+        countriesHashMap[78] = "Grenada"
+        countriesHashMap[79] = "Georgia"
+        countriesHashMap[80] = "French Guiana"
+        countriesHashMap[81] = "Guernsey"
+        countriesHashMap[82] = "Ghana"
+        countriesHashMap[83] = "Gibraltar"
+        countriesHashMap[84] = "Greenland"
+        countriesHashMap[85] = "Gambia"
+        countriesHashMap[86] = "Guinea"
+        countriesHashMap[87] = "Guadeloupe"
+        countriesHashMap[88] = "Equatorial Guinea"
+        countriesHashMap[89] = "Greece"
+        countriesHashMap[90] = "So. Georgia & So. Sandwich Isl."
+        countriesHashMap[91] = "Guatemala"
+        countriesHashMap[92] = "Guam"
+        countriesHashMap[93] = "Guinea-Bissau"
+        countriesHashMap[94] = "Guyana"
+        countriesHashMap[95] = "Hong Kong"
+        countriesHashMap[96] = "Heard & McDonald Islands"
+        countriesHashMap[97] = "Honduras"
+        countriesHashMap[98] = "Croatia"
+        countriesHashMap[99] = "Haiti"
+        countriesHashMap[100] = "Hungary"
+        countriesHashMap[101] = "Indonesia"
+        countriesHashMap[102] = "Ireland"
+        countriesHashMap[103] = "Israel"
+        countriesHashMap[104] = "Isle of Man"
+        countriesHashMap[105] = "India"
+        countriesHashMap[106] = "British Indian Ocean Territory"
+        countriesHashMap[107] = "Iraq"
+        countriesHashMap[108] = "Iran"
+        countriesHashMap[109] = "Iceland"
+        countriesHashMap[110] = "Italy"
+        countriesHashMap[111] = "Jersey"
+        countriesHashMap[112] = "Jamaica"
+        countriesHashMap[113] = "Jordan"
+        countriesHashMap[114] = "Japan"
+        countriesHashMap[115] = "Kenya"
+        countriesHashMap[116] = "Kyrgyzstan"
+        countriesHashMap[117] = "Cambodia"
+        countriesHashMap[118] = "Kiribati"
+        countriesHashMap[119] = "Comoros"
+        countriesHashMap[120] = "St. Kitts & Nevis"
+        countriesHashMap[121] = "North Korea"
+        countriesHashMap[122] = "South Korea"
+        countriesHashMap[123] = "Kuwait"
+        countriesHashMap[124] = "Cayman Islands"
+        countriesHashMap[125] = "Kazakhstan"
+        countriesHashMap[126] = "Laos"
+        countriesHashMap[127] = "Lebanon"
+        countriesHashMap[128] = "St. Lucia"
+        countriesHashMap[129] = "Liechtenstein"
+        countriesHashMap[130] = "Sri Lanka"
+        countriesHashMap[131] = "Liberia"
+        countriesHashMap[132] = "Lesotho"
+        countriesHashMap[133] = "Lithuania"
+        countriesHashMap[134] = "Luxembourg"
+        countriesHashMap[135] = "Latvia"
+        countriesHashMap[136] = "Libya"
+        countriesHashMap[137] = "Morocco"
+        countriesHashMap[138] = "Monaco"
+        countriesHashMap[139] = "Moldova"
+        countriesHashMap[140] = "Montenegro"
+        countriesHashMap[141] = "St. Martin"
+        countriesHashMap[142] = "Madagascar"
+        countriesHashMap[143] = "Marshall Islands"
+        countriesHashMap[144] = "Macedonia"
+        countriesHashMap[145] = "Mali"
+        countriesHashMap[146] = "Myanmar"
+        countriesHashMap[147] = "Mongolia"
+        countriesHashMap[148] = "Macau"
+        countriesHashMap[149] = "Northern Mariana Islands"
+        countriesHashMap[150] = "Martinique"
+        countriesHashMap[151] = "Mauritania"
+        countriesHashMap[152] = "Montserrat"
+        countriesHashMap[153] = "Malta"
+        countriesHashMap[154] = "Mauritius"
+        countriesHashMap[155] = "Maldives"
+        countriesHashMap[156] = "Malawi"
+        countriesHashMap[157] = "Mexico"
+        countriesHashMap[158] = "Malaysia"
+        countriesHashMap[159] = "Mozambique"
+        countriesHashMap[160] = "Namibia"
+        countriesHashMap[161] = "New Caledonia"
+        countriesHashMap[162] = "Niger"
+        countriesHashMap[163] = "Norfolk Island"
+        countriesHashMap[164] = "Nigeria"
+        countriesHashMap[165] = "Nicaragua"
+        countriesHashMap[166] = "Netherlands"
+        countriesHashMap[167] = "Norway"
+        countriesHashMap[168] = "Nepal"
+        countriesHashMap[169] = "Nauru"
+        countriesHashMap[170] = "Niue"
+        countriesHashMap[171] = "New Zealand"
+        countriesHashMap[172] = "Oman"
+        countriesHashMap[173] = "Panama"
+        countriesHashMap[174] = "Peru"
+        countriesHashMap[175] = "French Polynesia"
+        countriesHashMap[176] = "Papua New Guinea"
+        countriesHashMap[177] = "Philippines"
+        countriesHashMap[178] = "Pakistan"
+        countriesHashMap[179] = "Poland"
+        countriesHashMap[180] = "St. Pierre & Miquelon"
+        countriesHashMap[181] = "Pitcairn Islands"
+        countriesHashMap[182] = "Puerto Rico"
+        countriesHashMap[183] = "Palestinian Territories"
+        countriesHashMap[184] = "Portugal"
+        countriesHashMap[185] = "Palau"
+        countriesHashMap[186] = "Paraguay"
+        countriesHashMap[187] = "Qatar"
+        countriesHashMap[188] = "Réunion"
+        countriesHashMap[189] = "Romania"
+        countriesHashMap[190] = "Serbia"
+        countriesHashMap[191] = "Russia"
+        countriesHashMap[192] = "Rwanda"
+        countriesHashMap[193] = "Saudi Arabia"
+        countriesHashMap[194] = "Solomon Islands"
+        countriesHashMap[195] = "Seychelles"
+        countriesHashMap[196] = "Sudan"
+        countriesHashMap[197] = "Sweden"
+        countriesHashMap[198] = "Singapore"
+        countriesHashMap[199] = "St. Helena"
+        countriesHashMap[200] = "Slovenia"
+        countriesHashMap[201] = "Svalbard & Jan Mayen"
+        countriesHashMap[202] = "Slovakia"
+        countriesHashMap[203] = "Sierra Leone"
+        countriesHashMap[204] = "San Marino"
+        countriesHashMap[205] = "Senegal"
+        countriesHashMap[206] = "Somalia"
+        countriesHashMap[207] = "Suriname"
+        countriesHashMap[208] = "South Sudan"
+        countriesHashMap[209] = "São Tomé & Príncipe"
+        countriesHashMap[210] = "El Salvador"
+        countriesHashMap[211] = "Sint Maarten"
+        countriesHashMap[212] = "Syria"
+        countriesHashMap[213] = "Swaziland"
+        countriesHashMap[214] = "Turks & Caicos Islands"
+        countriesHashMap[215] = "Chad"
+        countriesHashMap[216] = "French Southern Territories"
+        countriesHashMap[217] = "Togo"
+        countriesHashMap[218] = "Thailand"
+        countriesHashMap[219] = "Tajikistan"
+        countriesHashMap[220] = "Tokelau"
+        countriesHashMap[221] = "Timor-Leste"
+        countriesHashMap[222] = "Turkmenistan"
+        countriesHashMap[223] = "Tunisia"
+        countriesHashMap[224] = "Tonga"
+        countriesHashMap[225] = "Turkey"
+        countriesHashMap[226] = "Trinidad & Tobago"
+        countriesHashMap[227] = "Tuvalu"
+        countriesHashMap[228] = "Taiwan"
+        countriesHashMap[229] = "Tanzania"
+        countriesHashMap[230] = "Ukraine"
+        countriesHashMap[231] = "Uganda"
+        countriesHashMap[232] = "United States"
+        countriesHashMap[233] = "Uruguay"
+        countriesHashMap[234] = "Uzbekistan"
+        countriesHashMap[235] = "Vatican City"
+        countriesHashMap[237] = "St. Vincent & Grenadines"
+        countriesHashMap[238] = "Venezuela"
+        countriesHashMap[239] = "British Virgin Islands"
+        countriesHashMap[240] = "U.S. Virgin Islands"
+        countriesHashMap[241] = "Vietnam"
+        countriesHashMap[242] = "Vanuatu"
+        countriesHashMap[243] = "Wallis & Futuna"
+        countriesHashMap[244] = "Samoa"
+        countriesHashMap[245] = "Kosovo"
+        countriesHashMap[246] = "Yemen"
+        countriesHashMap[247] = "Mayotte"
+        countriesHashMap[248] = "South Africa"
+        countriesHashMap[249] = "Zambia"
+        countriesHashMap[250] = "Zimbabwe"
 
-        questionsList.add(que1)
-
-        // 2
-        val que2 = FlagQuestion(
-            2, "What country does this flag belong to?",
-            R.drawable.ic_flag_of_australia,
-            "Angola", "Austria",
-            "Australia", "Armenia", 3
-        )
-
-        questionsList.add(que2)
-
-        // 3
-        val que3 = FlagQuestion(
-            3, "What country does this flag belong to?",
-            R.drawable.ic_flag_of_brazil,
-            "Belarus", "Belize",
-            "Brunei", "Brazil", 4
-        )
-
-        questionsList.add(que3)
-
-        // 4
-        val que4 = FlagQuestion(
-            4, "What country does this flag belong to?",
-            R.drawable.ic_flag_of_belgium,
-            "Bahamas", "Belgium",
-            "Barbados", "Belize", 2
-        )
-
-        questionsList.add(que4)
-
-        // 5
-        val que5 = FlagQuestion(
-            5, "What country does this flag belong to?",
-            R.drawable.ic_flag_of_fiji,
-            "Gabon", "France",
-            "Fiji", "Finland", 3
-        )
-
-        questionsList.add(que5)
-
-        // 6
-        val que6 = FlagQuestion(
-            6, "What country does this flag belong to?",
-            R.drawable.ic_flag_of_germany,
-            "Germany", "Georgia",
-            "Greece", "none of these", 1
-        )
-
-        questionsList.add(que6)
-
-        // 7
-        val que7 = FlagQuestion(
-            7, "What country does this flag belong to?",
-            R.drawable.ic_flag_of_denmark,
-            "Dominica", "Egypt",
-            "Denmark", "Ethiopia", 3
-        )
-
-        questionsList.add(que7)
-
-        // 8
-        val que8 = FlagQuestion(
-            8, "What country does this flag belong to?",
-            R.drawable.ic_flag_of_india,
-            "Ireland", "Iran",
-            "Hungary", "India", 4
-        )
-
-        questionsList.add(que8)
-
-        // 9
-        val que9 = FlagQuestion(
-            9, "What country does this flag belong to?",
-            R.drawable.ic_flag_of_new_zealand,
-            "Australia", "New Zealand",
-            "Tuvalu", "United States of America", 2
-        )
-
-        questionsList.add(que9)
-
-        // 10
-        val que10 = FlagQuestion(
-            10, "What country does this flag belong to?",
-            R.drawable.ic_flag_of_kuwait,
-            "Kuwait", "Jordan",
-            "Sudan", "Palestine", 1
-        )
-
-        questionsList.add(que10)
-
-        return questionsList
+        return countriesHashMap
     }
-    // END
+
+    fun getFlags(): HashMap<Int, Int>{
+        val flagsHashMap = HashMap<Int, Int>()
+
+        flagsHashMap[0] = R.drawable.ad
+        flagsHashMap[1] = R.drawable.ae
+        flagsHashMap[2] = R.drawable.af
+        flagsHashMap[3] = R.drawable.ag
+        flagsHashMap[4] = R.drawable.ai
+        flagsHashMap[5] = R.drawable.al
+        flagsHashMap[6] = R.drawable.am
+        flagsHashMap[7] = R.drawable.ao
+        flagsHashMap[8] = R.drawable.ar
+        flagsHashMap[9] = R.drawable.as_fl
+        flagsHashMap[10] = R.drawable.at
+        flagsHashMap[11] = R.drawable.au
+        flagsHashMap[12] = R.drawable.aw
+        flagsHashMap[13] = R.drawable.ax
+        flagsHashMap[14] = R.drawable.az
+        flagsHashMap[15] = R.drawable.ba
+        flagsHashMap[16] = R.drawable.bb
+        flagsHashMap[17] = R.drawable.bd
+        flagsHashMap[18] = R.drawable.be
+        flagsHashMap[19] = R.drawable.bf
+        flagsHashMap[20] = R.drawable.bg
+        flagsHashMap[21] = R.drawable.bh
+        flagsHashMap[22] = R.drawable.bi
+        flagsHashMap[23] = R.drawable.bj
+        flagsHashMap[24] = R.drawable.bl
+        flagsHashMap[25] = R.drawable.bm
+        flagsHashMap[26] = R.drawable.bn
+        flagsHashMap[27] = R.drawable.bo
+        flagsHashMap[28] = R.drawable.br
+        flagsHashMap[29] = R.drawable.bs
+        flagsHashMap[30] = R.drawable.bt
+        flagsHashMap[31] = R.drawable.bv
+        flagsHashMap[32] = R.drawable.bw
+        flagsHashMap[33] = R.drawable.by
+        flagsHashMap[34] = R.drawable.bz
+        flagsHashMap[35] = R.drawable.ca
+        flagsHashMap[36] = R.drawable.cc
+        flagsHashMap[37] = R.drawable.cd
+        flagsHashMap[38] = R.drawable.cf
+        flagsHashMap[39] = R.drawable.cg
+        flagsHashMap[40] = R.drawable.ch
+        flagsHashMap[41] = R.drawable.ci
+        flagsHashMap[42] = R.drawable.ck
+        flagsHashMap[43] = R.drawable.cl
+        flagsHashMap[44] = R.drawable.cm
+        flagsHashMap[45] = R.drawable.cn
+        flagsHashMap[46] = R.drawable.co
+        flagsHashMap[47] = R.drawable.cr
+        flagsHashMap[48] = R.drawable.cu
+        flagsHashMap[49] = R.drawable.cv
+        flagsHashMap[50] = R.drawable.cw
+        flagsHashMap[51] = R.drawable.cx
+        flagsHashMap[52] = R.drawable.cy
+        flagsHashMap[53] = R.drawable.cz
+        flagsHashMap[54] = R.drawable.de
+        flagsHashMap[55] = R.drawable.dj
+        flagsHashMap[56] = R.drawable.dk
+        flagsHashMap[57] = R.drawable.dm
+        flagsHashMap[58] = R.drawable.do_fl
+        flagsHashMap[59] = R.drawable.dz
+        flagsHashMap[60] = R.drawable.ec
+        flagsHashMap[61] = R.drawable.ee
+        flagsHashMap[62] = R.drawable.eg
+        flagsHashMap[63] = R.drawable.er
+        flagsHashMap[64] = R.drawable.es
+        flagsHashMap[65] = R.drawable.et
+        flagsHashMap[66] = R.drawable.fi
+        flagsHashMap[67] = R.drawable.fj
+        flagsHashMap[68] = R.drawable.fk
+        flagsHashMap[69] = R.drawable.fm
+        flagsHashMap[70] = R.drawable.fo
+        flagsHashMap[71] = R.drawable.fr
+        flagsHashMap[72] = R.drawable.ga
+        flagsHashMap[73] = R.drawable.gb
+        flagsHashMap[74] = R.drawable.gb_eng
+        flagsHashMap[75] = R.drawable.gb_nir
+        flagsHashMap[76] = R.drawable.gb_sct
+        flagsHashMap[77] = R.drawable.gb_wls
+        flagsHashMap[78] = R.drawable.gd
+        flagsHashMap[79] = R.drawable.ge
+        flagsHashMap[80] = R.drawable.gf
+        flagsHashMap[81] = R.drawable.gg
+        flagsHashMap[82] = R.drawable.gh
+        flagsHashMap[83] = R.drawable.gi
+        flagsHashMap[84] = R.drawable.gl
+        flagsHashMap[85] = R.drawable.gm
+        flagsHashMap[86] = R.drawable.gn
+        flagsHashMap[87] = R.drawable.gp
+        flagsHashMap[88] = R.drawable.gq
+        flagsHashMap[89] = R.drawable.gr
+        flagsHashMap[90] = R.drawable.gs
+        flagsHashMap[91] = R.drawable.gt
+        flagsHashMap[92] = R.drawable.gu
+        flagsHashMap[93] = R.drawable.gw
+        flagsHashMap[94] = R.drawable.gy
+        flagsHashMap[95] = R.drawable.hk
+        flagsHashMap[96] = R.drawable.hm
+        flagsHashMap[97] = R.drawable.hn
+        flagsHashMap[98] = R.drawable.hr
+        flagsHashMap[99] = R.drawable.ht
+        flagsHashMap[100] = R.drawable.hu
+        flagsHashMap[101] = R.drawable.id
+        flagsHashMap[102] = R.drawable.ie
+        flagsHashMap[103] = R.drawable.il
+        flagsHashMap[104] = R.drawable.im
+        flagsHashMap[105] = R.drawable.in_fl
+        flagsHashMap[106] = R.drawable.io
+        flagsHashMap[107] = R.drawable.iq
+        flagsHashMap[108] = R.drawable.ir
+        flagsHashMap[109] = R.drawable.is_fl
+        flagsHashMap[110] = R.drawable.it
+        flagsHashMap[111] = R.drawable.je
+        flagsHashMap[112] = R.drawable.jm
+        flagsHashMap[113] = R.drawable.jo
+        flagsHashMap[114] = R.drawable.jp
+        flagsHashMap[115] = R.drawable.ke
+        flagsHashMap[116] = R.drawable.kg
+        flagsHashMap[117] = R.drawable.kh
+        flagsHashMap[118] = R.drawable.ki
+        flagsHashMap[119] = R.drawable.km
+        flagsHashMap[120] = R.drawable.kn
+        flagsHashMap[121] = R.drawable.kp
+        flagsHashMap[122] = R.drawable.kr
+        flagsHashMap[123] = R.drawable.kw
+        flagsHashMap[124] = R.drawable.ky
+        flagsHashMap[125] = R.drawable.kz
+        flagsHashMap[126] = R.drawable.la
+        flagsHashMap[127] = R.drawable.lb
+        flagsHashMap[128] = R.drawable.lc
+        flagsHashMap[129] = R.drawable.li
+        flagsHashMap[130] = R.drawable.lk
+        flagsHashMap[131] = R.drawable.lr
+        flagsHashMap[132] = R.drawable.ls
+        flagsHashMap[133] = R.drawable.lt
+        flagsHashMap[134] = R.drawable.lu
+        flagsHashMap[135] = R.drawable.lv
+        flagsHashMap[136] = R.drawable.ly
+        flagsHashMap[137] = R.drawable.ma
+        flagsHashMap[138] = R.drawable.mc
+        flagsHashMap[139] = R.drawable.md
+        flagsHashMap[140] = R.drawable.me
+        flagsHashMap[141] = R.drawable.mf
+        flagsHashMap[142] = R.drawable.mg
+        flagsHashMap[143] = R.drawable.mh
+        flagsHashMap[144] = R.drawable.mk
+        flagsHashMap[145] = R.drawable.ml
+        flagsHashMap[146] = R.drawable.mm
+        flagsHashMap[147] = R.drawable.mn
+        flagsHashMap[148] = R.drawable.mo
+        flagsHashMap[149] = R.drawable.mp
+        flagsHashMap[150] = R.drawable.mq
+        flagsHashMap[151] = R.drawable.mr
+        flagsHashMap[152] = R.drawable.ms
+        flagsHashMap[153] = R.drawable.mt
+        flagsHashMap[154] = R.drawable.mu
+        flagsHashMap[155] = R.drawable.mv
+        flagsHashMap[156] = R.drawable.mw
+        flagsHashMap[157] = R.drawable.mx
+        flagsHashMap[158] = R.drawable.my
+        flagsHashMap[159] = R.drawable.mz
+        flagsHashMap[160] = R.drawable.na
+        flagsHashMap[161] = R.drawable.nc
+        flagsHashMap[162] = R.drawable.ne
+        flagsHashMap[163] = R.drawable.nf
+        flagsHashMap[164] = R.drawable.ng
+        flagsHashMap[165] = R.drawable.ni
+        flagsHashMap[166] = R.drawable.nl
+        flagsHashMap[167] = R.drawable.no
+        flagsHashMap[168] = R.drawable.np
+        flagsHashMap[169] = R.drawable.nr
+        flagsHashMap[170] = R.drawable.nu
+        flagsHashMap[171] = R.drawable.nz
+        flagsHashMap[172] = R.drawable.om
+        flagsHashMap[173] = R.drawable.pa
+        flagsHashMap[174] = R.drawable.pe
+        flagsHashMap[175] = R.drawable.pf
+        flagsHashMap[176] = R.drawable.pg
+        flagsHashMap[177] = R.drawable.ph
+        flagsHashMap[178] = R.drawable.pk
+        flagsHashMap[179] = R.drawable.pl
+        flagsHashMap[180] = R.drawable.pm
+        flagsHashMap[181] = R.drawable.pn
+        flagsHashMap[182] = R.drawable.pr
+        flagsHashMap[183] = R.drawable.ps
+        flagsHashMap[184] = R.drawable.pt
+        flagsHashMap[185] = R.drawable.pw
+        flagsHashMap[186] = R.drawable.py
+        flagsHashMap[187] = R.drawable.qa
+        flagsHashMap[188] = R.drawable.re
+        flagsHashMap[189] = R.drawable.ro
+        flagsHashMap[190] = R.drawable.rs
+        flagsHashMap[191] = R.drawable.ru
+        flagsHashMap[192] = R.drawable.rw
+        flagsHashMap[193] = R.drawable.sa
+        flagsHashMap[194] = R.drawable.sb
+        flagsHashMap[195] = R.drawable.sc
+        flagsHashMap[196] = R.drawable.sd
+        flagsHashMap[197] = R.drawable.se
+        flagsHashMap[198] = R.drawable.sg
+        flagsHashMap[199] = R.drawable.sh
+        flagsHashMap[200] = R.drawable.si
+        flagsHashMap[201] = R.drawable.sj
+        flagsHashMap[202] = R.drawable.sk
+        flagsHashMap[203] = R.drawable.sl
+        flagsHashMap[204] = R.drawable.sm
+        flagsHashMap[205] = R.drawable.sn
+        flagsHashMap[206] = R.drawable.so
+        flagsHashMap[207] = R.drawable.sr
+        flagsHashMap[208] = R.drawable.ss
+        flagsHashMap[209] = R.drawable.st
+        flagsHashMap[210] = R.drawable.sv
+        flagsHashMap[211] = R.drawable.sx
+        flagsHashMap[212] = R.drawable.sy
+        flagsHashMap[213] = R.drawable.sz
+        flagsHashMap[214] = R.drawable.tc
+        flagsHashMap[215] = R.drawable.td
+        flagsHashMap[216] = R.drawable.tf
+        flagsHashMap[217] = R.drawable.tg
+        flagsHashMap[218] = R.drawable.th
+        flagsHashMap[219] = R.drawable.tj
+        flagsHashMap[220] = R.drawable.tk
+        flagsHashMap[221] = R.drawable.tl
+        flagsHashMap[222] = R.drawable.tm
+        flagsHashMap[223] = R.drawable.tn
+        flagsHashMap[224] = R.drawable.to
+        flagsHashMap[225] = R.drawable.tr
+        flagsHashMap[226] = R.drawable.tt
+        flagsHashMap[227] = R.drawable.tv
+        flagsHashMap[228] = R.drawable.tw
+        flagsHashMap[229] = R.drawable.tz
+        flagsHashMap[230] = R.drawable.ua
+        flagsHashMap[231] = R.drawable.ug
+        flagsHashMap[232] = R.drawable.us
+        flagsHashMap[233] = R.drawable.uy
+        flagsHashMap[234] = R.drawable.uz
+        flagsHashMap[235] = R.drawable.va
+        flagsHashMap[237] = R.drawable.vc
+        flagsHashMap[238] = R.drawable.ve
+        flagsHashMap[239] = R.drawable.vg
+        flagsHashMap[240] = R.drawable.vi
+        flagsHashMap[241] = R.drawable.vn
+        flagsHashMap[242] = R.drawable.vu
+        flagsHashMap[243] = R.drawable.wf
+        flagsHashMap[244] = R.drawable.ws
+        flagsHashMap[245] = R.drawable.xk
+        flagsHashMap[246] = R.drawable.ye
+        flagsHashMap[247] = R.drawable.yt
+        flagsHashMap[248] = R.drawable.za
+        flagsHashMap[249] = R.drawable.zm
+        flagsHashMap[250] = R.drawable.zw
+
+        return flagsHashMap
+
+    }
 }
-// END
