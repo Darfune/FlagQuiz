@@ -30,6 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:backgroundTint="@color/light_grey"
             android:contentDescription="@string/quiz_image"
             android:src="@drawable/ad"/>
 
@@ -63,7 +64,7 @@
 
         </LinearLayout>
 
-        <Button
+        <android.widget.Button
             android:id="@+id/optionOneBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -75,44 +76,57 @@
             android:padding="16dp"
             android:text="Option One"
             android:textColor="@color/light_grey"
+            android:onClick="selectedAnswer"
             android:textSize="16sp"
             app:background="@android:drawable/screen_background_light_transparent" />
 
-        <Button
+        <android.widget.Button
             android:id="@+id/optionTwoBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:backgroundTint="@color/white"
+            android:background="@drawable/default_option_border_bg"
+            android:backgroundTint="@color/grey"
+            android:backgroundTintMode="add"
             android:gravity="center"
             android:padding="16dp"
-            android:textColor="@color/purple_500"
+            android:text="Option Two"
+            android:textColor="@color/light_grey"
+            android:onClick="selectedAnswer"
             android:textSize="16sp"
-            android:text="Option Two"/>
+            app:background="@android:drawable/screen_background_light_transparent" />
 
-        <Button
+        <android.widget.Button
             android:id="@+id/optionThreeBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:backgroundTint="@color/white"
+            android:background="@drawable/default_option_border_bg"
+            android:backgroundTint="@color/grey"
+            android:backgroundTintMode="add"
             android:gravity="center"
             android:padding="16dp"
-            android:textColor="@color/purple_500"
+            android:text="Option Three"
+            android:textColor="@color/light_grey"
+            android:onClick="selectedAnswer"
             android:textSize="16sp"
-            android:text="Option Three"/>
+            app:background="@android:drawable/screen_background_light_transparent" />
 
-        <Button
+        <android.widget.Button
             android:id="@+id/optionFourBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:backgroundTint="@color/white"
+            android:background="@drawable/default_option_border_bg"
+            android:backgroundTint="@color/grey"
+            android:backgroundTintMode="add"
             android:gravity="center"
             android:padding="16dp"
-            android:textColor="@color/purple_500"
+            android:text="Option Four"
+            android:textColor="@color/light_grey"
+            android:onClick="selectedAnswer"
             android:textSize="16sp"
-            android:text="Option Four"/>
+            app:background="@android:drawable/screen_background_light_transparent" />
 
     </LinearLayout>
 
