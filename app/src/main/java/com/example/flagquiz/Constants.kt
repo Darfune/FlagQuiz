@@ -2,6 +2,9 @@ package com.example.flagquiz
 
 object Constants {
 
+    const val userName: String = "username"
+    const val correctAnswers: String = "0"
+
     fun getCountries(): HashMap<Int, String> {
         var countriesHashMap = HashMap<Int, String>()
 
