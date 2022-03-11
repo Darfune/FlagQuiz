@@ -11,4 +11,10 @@
     <color name="light_grey">#847A8C</color>
     <color name="hint_grey">#CAC7CC</color>
     <color name="question_color">#38353A</color>
+    <color name="correct_selected">#2AD81E</color>
+    <color name="correct_selected_outline">#1B5E20</color>
+    <color name="correct_not_selected">#A5D6A7</color>
+    <color name="correct_not_selected_outline">#388E3C</color>
+    <color name="wrong_selected">#EF9A9A</color>
+    <color name="wrong_selected_outline">#B71C1C</color>
 </resources>
