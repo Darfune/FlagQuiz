@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Projects/Kotlin/FlagQuiz/app/src/main/res/drawable/corrent_not_selected_bg.xml" value="0.3665" />
         <entry key="..\:/Android Projects/Kotlin/FlagQuiz/app/src/main/res/drawable/deafault_option_border_bg.xml" value="0.3665" />
+        <entry key="..\:/Android Projects/Kotlin/FlagQuiz/app/src/main/res/drawable/default_option_border_bg.xml" value="0.3665" />
         <entry key="..\:/Android Projects/Kotlin/FlagQuiz/app/src/main/res/drawable/roundstyle.xml" value="0.3665" />
+        <entry key="..\:/Android Projects/Kotlin/FlagQuiz/app/src/main/res/drawable/wrong_selected_option_bg.xml" value="0.3665" />
         <entry key="..\:/Android Projects/Kotlin/FlagQuiz/app/src/main/res/layout/activity_flag_quiz_questions.xml" value="0.36666666666666664" />
         <entry key="..\:/Android Projects/Kotlin/FlagQuiz/app/src/main/res/layout/activity_main.xml" value="0.5" />
       </map>
