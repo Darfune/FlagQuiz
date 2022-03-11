@@ -10,4 +10,5 @@
     <color name="grey">#615F63</color>
     <color name="light_grey">#847A8C</color>
     <color name="hint_grey">#CAC7CC</color>
+    <color name="question_color">#38353A</color>
 </resources>
