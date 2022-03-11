@@ -28,10 +28,13 @@ class FlagQuizQuestions : AppCompatActivity() {
     private var answer: Int? = null
     private var progress: Int? = 0
     private var correctAnswers: Int = 0
+    private var mUsername: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_flag_quiz_questions)
+
+        mUsername = intent.getStringExtra(Constants.userName)
 
         flagImageView = findViewById(R.id.flagImageView)
         progressBar =  findViewById(R.id.progressBar)
@@ -225,6 +228,7 @@ class FlagQuizQuestions : AppCompatActivity() {
         progress = progress?.plus(1)
         if (progress == 10){
             val intent = Intent(this, EndActivity::class.java)
+            intent.putExtra(Constants.userName, mUsername)
             intent.putExtra(Constants.correctAnswers, correctAnswers.toString())
             startActivity(intent)
 
