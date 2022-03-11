@@ -224,7 +224,10 @@ class FlagQuizQuestions : AppCompatActivity() {
 
         progress = progress?.plus(1)
         if (progress == 10){
-            startActivity(Intent(this, EndActivity::class.java))
+            val intent = Intent(this, EndActivity::class.java)
+            intent.putExtra(Constants.correctAnswers, correctAnswers.toString())
+            startActivity(intent)
+
             finish()
         }
 
