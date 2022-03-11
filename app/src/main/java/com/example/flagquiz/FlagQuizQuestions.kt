@@ -1,5 +1,7 @@
 package com.example.flagquiz
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -25,6 +27,7 @@ class FlagQuizQuestions : AppCompatActivity() {
     private var optionFourBtn: Button? = null
     private var answer: Int? = null
     private var progress: Int? = 0
+    private var correctAnswers: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -93,6 +96,7 @@ class FlagQuizQuestions : AppCompatActivity() {
 
     }
 
+    @SuppressLint("SetTextI18n")
     fun selectedAnswer(view: View) {
         when (view.id){
             R.id.optionOneBtn ->{
@@ -101,6 +105,7 @@ class FlagQuizQuestions : AppCompatActivity() {
                         this,
                         R.drawable.correct_selected_option_bg
                     )
+                    correctAnswers++
                 }
                 else{
                     optionOneBtn?.background =  ContextCompat.getDrawable(
@@ -129,6 +134,7 @@ class FlagQuizQuestions : AppCompatActivity() {
                         this,
                         R.drawable.correct_selected_option_bg
                     )
+                    correctAnswers++
                 }
                 else{
                     optionTwoBtn?.background =  ContextCompat.getDrawable(
@@ -157,6 +163,7 @@ class FlagQuizQuestions : AppCompatActivity() {
                         this,
                         R.drawable.correct_selected_option_bg
                     )
+                    correctAnswers++
                 }
                 else{
                     optionThreeBtn?.background =  ContextCompat.getDrawable(
@@ -185,6 +192,7 @@ class FlagQuizQuestions : AppCompatActivity() {
                         this,
                         R.drawable.correct_selected_option_bg
                     )
+                    correctAnswers++
                 }
                 else{
                     optionFourBtn?.background =  ContextCompat.getDrawable(
@@ -213,6 +221,16 @@ class FlagQuizQuestions : AppCompatActivity() {
         optionTwoBtn?.isClickable = false
         optionThreeBtn?.isClickable = false
         optionFourBtn?.isClickable = false
+
+        progress = progress?.plus(1)
+        if (progress == 10){
+            startActivity(Intent(this, EndActivity::class.java))
+            finish()
+        }
+
+        progressBar?.progress = progress!!
+        progressTextView?.text = "$progress/10"
+
 
         Handler(Looper.getMainLooper()).postDelayed({
             optionOneBtn?.background =  ContextCompat.getDrawable(
