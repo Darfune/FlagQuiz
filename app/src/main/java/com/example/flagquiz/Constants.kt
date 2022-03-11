@@ -149,7 +149,7 @@ object Constants {
         countriesHashMap[141] = "St. Martin"
         countriesHashMap[142] = "Madagascar"
         countriesHashMap[143] = "Marshall Islands"
-        countriesHashMap[144] = "Macedonia"
+        countriesHashMap[144] = "North Macedonia"
         countriesHashMap[145] = "Mali"
         countriesHashMap[146] = "Myanmar"
         countriesHashMap[147] = "Mongolia"
